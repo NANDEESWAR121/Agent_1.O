@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanda Antigravity Agent Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Nanda Antigravity Agent Settings</h1>
+      <p>Customize target buttons, text keywords, and polling frequencies.</p>
+    </div>
+
+    <div class="card">
+      <h2>Target Button Texts</h2>
+      <p class="subtitle">Comma-separated button labels to automatically detect and click.</p>
+      <input type="text" id="targetButtonsInput" class="input-field" placeholder="Submit, Retry, Allow, Confirm">
+    </div>
+
+    <div class="card">
+      <h2>Dialog Text Keywords</h2>
+      <p class="subtitle">Comma-separated phrases inside dialog windows to identify target prompts.</p>
+      <textarea id="textKeywordsInput" class="textarea-field" rows="4" placeholder="Allow running this command?, Agent terminated due to error, permission"></textarea>
+    </div>
+
+    <div class="card">
+      <h2>Polling Interval (ms)</h2>
+      <p class="subtitle">Frequency (in milliseconds) for backup DOM checks.</p>
+      <input type="number" id="pollingIntervalInput" class="input-field" value="1500" min="200" step="100">
+    </div>
+
+    <div class="actions">
+      <button id="saveBtn" class="btn btn-save">Save Settings</button>
+      <button id="resetBtn" class="btn btn-reset">Reset to Defaults</button>
+      <span id="saveStatus" class="save-status"></span>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
